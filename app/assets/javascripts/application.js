@@ -17,7 +17,7 @@
 //= require bootstrap/alert
 //= require bootstrap/modal
 //= require bootstrap/tooltip
-//= require bootstrap-markdown
+//= require bootstrap-markdown-bundle
 //= require_self
 
 
@@ -33,16 +33,5 @@ $('.dp').on('change', function(){
     });
   });
 
-var ready;
-ready = (function() {
-  $("#search-form").autocomplete({
-    source: '/autocomplete',
-    delay: 500,
-    select: function( event, ui ){
-      location.href = ui.item.value;
-    }
-  });
-});
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+
