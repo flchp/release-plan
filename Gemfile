@@ -44,6 +44,7 @@ gem "ultra_markdown"
 gem 'rails-bootstrap-markdown'
 
 gem "active_link_to", :github => "xdite/active_link_to", :branch => "wrap_tag_css"
+gem "wice_grid"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -63,5 +64,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'annotate'
 end
 

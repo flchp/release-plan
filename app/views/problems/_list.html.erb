@@ -1,0 +1,14 @@
+<%= grid(problem_grid) do |g|
+
+
+  g.column(name: "Title") do |problem|
+     render_problem_title(problem)
+  end
+
+  g.column(name: "Created", :attribute => "created_at")
+
+  g.column(name: "Author") do |problem|
+    render_problem_author(problem)
+  end
+end %>
+

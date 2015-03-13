@@ -5,4 +5,17 @@
    <%= ibutton("Add Problem", new_problem_path, :class => "btn btn-default btn-primary", :iclass => "fa fa-plus") %> 
  </span>
 
+
+
+
+</div>
+
+
+
+<hr>
+
+
+<div class="group">
+  <%= render "problems/list", :problem_grid => @problems_grid %>
+
 </div>
