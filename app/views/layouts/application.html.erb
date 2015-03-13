@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <%= stylesheet_link_tag "application" %>
+
+  <%= csrf_meta_tags %>
+   <%= render_page_title_tag %>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <%= render "common/header" %>
+
+    <%= notice_message %>
+    
+    <%= yield %>
+
+  </div>
+
+<footer class="footer">
+</footer>
+<%= render :partial => "common/bootstrap_modal" %>
+
+<%= javascript_include_tag "application" %>
+
+<%= yield :handwrite_javascript %>
+
+
+</body>
+</html>
