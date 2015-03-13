@@ -8,10 +8,13 @@ class SolutionsController < ApplicationController
   end
 
   def create
+   
     @solution = @problem.solutions.build(solution_params)
+    
+    @solution.user = current_user
 
     if @solution.save
-      redirec_to problem_path(problem)
+      redirec_to problem_path(@problem)
     else
       redner :new
     end
