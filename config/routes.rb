@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :problems do
     resources :solutions
+    resources :comments, :controller => "problem_comments"
   end
 
 

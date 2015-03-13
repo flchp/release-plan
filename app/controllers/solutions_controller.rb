@@ -16,7 +16,7 @@ class SolutionsController < ApplicationController
     if @solution.save
       redirect_to problem_path(@problem)
     else
-      redner :new
+      render :new
     end
   end
 
