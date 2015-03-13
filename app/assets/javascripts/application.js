@@ -2,7 +2,7 @@
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
 //
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
@@ -12,5 +12,37 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require underscore
+//= require bootstrap/dropdown
+//= require bootstrap/alert
+//= require bootstrap/modal
+//= require bootstrap/tooltip
+//= require bootstrap-markdown
+//= require_self
+
+
+
+$('.dp').on('change', function(){
+    $('.datepicker').hide();
+});
+
+  $('.btn-group button[data-calendar-nav]').each(function() {
+    var $this = $(this);
+    $this.click(function() {
+      calendar.navigate($this.data('calendar-nav'));
+    });
+  });
+
+var ready;
+ready = (function() {
+  $("#search-form").autocomplete({
+    source: '/autocomplete',
+    delay: 500,
+    select: function( event, ui ){
+      location.href = ui.item.value;
+    }
+  });
+});
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
