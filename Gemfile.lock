@@ -53,6 +53,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_commentable (4.0.2)
     airbrake (4.1.0)
       builder
       multi_json
@@ -259,6 +260,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to!
+  acts_as_commentable
   annotate
   bootstrap-sass (= 3.1.1.1)
   bootstrap_helper (~> 4.2)!

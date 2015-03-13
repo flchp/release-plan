@@ -36,6 +36,7 @@ gem "seo_helper"
 
 gem "omniauth-google-oauth2"
 
+gem 'acts_as_commentable'
 
 gem "reform"
 gem "cells"
