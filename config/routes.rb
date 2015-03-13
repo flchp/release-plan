@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  resources :problems
+  resources :problems do
+    resources :solutions
+  end
 
 
   root 'problems#index'
