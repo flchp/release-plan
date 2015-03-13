@@ -14,7 +14,7 @@ class SolutionsController < ApplicationController
     @solution.user = current_user
 
     if @solution.save
-      redirec_to problem_path(@problem)
+      redirect_to problem_path(@problem)
     else
       redner :new
     end

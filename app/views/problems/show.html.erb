@@ -22,10 +22,11 @@
 
 
 <h3> How can we improve : </h3>
+<hr>
 
 <%= link_to("propose solution", new_problem_solution_path(@problem)) %>
 
-<hr>
+<%= render :partial =>  "problems/solution", :collection => @problem.solutions, as: :solution  %>
 
 <h3> Discussions </h3>
 
