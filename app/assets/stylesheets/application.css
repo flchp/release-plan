@@ -14,6 +14,7 @@
  *= require font-awesome
  *= require bootstrap-markdown
  *= require solarized
+ *= require vendor_wrapper
  *= require_self
  */
 

@@ -1,7 +1,7 @@
 module SolutionsHelper
 
   def render_solution_content(solution)
-    solution.content
+    solution.content.to_markdown
   end
 
 

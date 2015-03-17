@@ -3,7 +3,7 @@ class ProblemsController < ApplicationController
   def index
     @problems = Problem.all
 
-    @problems_grid = initialize_grid(@problems)
+   
   end
 
 

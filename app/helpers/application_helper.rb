@@ -5,8 +5,15 @@ module ApplicationHelper
     gravatar_image_tag(user.email, :class => "thumb #{options[:class]}", :alt => user.name , :gravatar => { :size => options[:size] ,  :default => :wavatar })
   end
   
-  def render_user_avatar(user)
-    avatar_icon(user, :class => "media-object dp img-circle", :size => 80)
+
+  def render_user_avatar(user, size = :small)
+    width = case size
+    when :tiny
+      20
+    else
+      60
+    end
+    avatar_icon(user, :class => "img-circle", :size => width)
   end
 
 

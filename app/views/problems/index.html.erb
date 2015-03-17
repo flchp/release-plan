@@ -1,21 +1,25 @@
+<div class="page-section">
+    <div class="row">
+        <div class="col-md-8 col-lg-9">
+            <div class="panel panel-default paper-shadow" data-z="0.5">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="media v-middle">
+                            <div class="media-body">
+                                <h4 class="text-headline margin-none">General</h4>
+                                <p class="text-subhead text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, illo.</p>
+                            </div>
+                            <div class="media-right">
 
-<div class="group">
+                                <%= ibutton("Start Discussion", new_problem_path, :class => "btn btn-default btn-primary", :iclass => "fa fa-fw fa-plus") %>
+                            </div>
+                        </div>
+                    </li>
+                    <%= render :partial => "problems/list", :collection => @problems , :as => :problem %>
 
- <span class="pull-right" style="padding-top:20px;"> 
-   <%= ibutton("Add Problem", new_problem_path, :class => "btn btn-default btn-primary", :iclass => "fa fa-plus") %> 
- </span>
+                </ul>
+            </div>
+        </div>
 
-
-
-
-</div>
-
-
-
-<hr>
-
-
-<div class="group">
-  <%= render "problems/list", :problem_grid => @problems_grid %>
-
+    </div>
 </div>

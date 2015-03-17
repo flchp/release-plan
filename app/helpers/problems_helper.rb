@@ -10,6 +10,6 @@ module ProblemsHelper
 
 
   def render_problem_description(problem)
-    problem.description
+    problem.description.to_markdown
   end
 end

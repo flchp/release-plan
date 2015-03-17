@@ -1,14 +1,24 @@
-<%= grid(problem_grid) do |g|
-
-
-  g.column(name: "Problem") do |problem|
-     render_problem_title(problem)
-  end
-
-  g.column(name: "Created", :attribute => "created_at")
-
-  g.column(name: "Author") do |problem|
-    render_problem_author(problem)
-  end
-end %>
-
+<li class="list-group-item media v-middle">
+    <div class="media-left">
+        <div class="icon-block half img-circle bg-grey-300">
+            <i class="fa fa-file-text text-white"></i>
+        </div>
+    </div>
+    <div class="media-body">
+        <h4 class="text-subhead margin-none">
+          <%= link_to(problem.title, problem_path(problem),  :class => "link-text-color")  %>
+        </h4>
+        <div class="text-light text-caption">
+            posted by
+            <a href="#">
+              <%= render_user_avatar(problem.user, :tiny) %>
+              <%= render_user_name(problem.user) %> </a> &nbsp; | 
+              <i class="fa fa-clock-o fa-fw"></i> <%= time_ago_in_words(problem.created_at) %> 
+        </div>
+    </div>
+    <div class="media-right">
+        <a href="website-forum-thread.html" class="btn btn-white text-light">
+          <i class="fa fa-comments fa-fw"></i> <%= problem.comments_count %>
+        </a>
+    </div>
+</li>
