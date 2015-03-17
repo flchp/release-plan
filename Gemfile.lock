@@ -93,6 +93,9 @@ GEM
     disposable (0.0.9)
       representable (~> 2.0)
       uber
+    dotenv (2.0.0)
+    dotenv-rails (2.0.0)
+      dotenv (= 2.0.0)
     enum_help (0.0.14)
     erubis (2.7.0)
     execjs (2.4.0)
@@ -269,6 +272,7 @@ DEPENDENCIES
   cells
   coffee-rails (~> 4.1.0)
   devise
+  dotenv-rails
   enum_help
   font-awesome-rails
   gravatar_image_tag
