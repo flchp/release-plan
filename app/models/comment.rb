@@ -12,12 +12,18 @@
 #  created_at       :datetime
 #  updated_at       :datetime
 #
+# Indexes
+#
+#  index_comments_on_commentable_id    (commentable_id)
+#  index_comments_on_commentable_type  (commentable_type)
+#  index_comments_on_user_id           (user_id)
+#
 
 class Comment < ActiveRecord::Base
 
   include ActsAsCommentable::Comment
 
-  belongs_to :commentable, :polymorphic => true
+  belongs_to :commentable, :polymorphic => true, :counter_cache => true
 
   validates :comment, presence: true
 

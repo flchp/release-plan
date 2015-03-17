@@ -1,6 +1,9 @@
 
 
 <div class="group">
-  
+  <h4> Proposal <%= solution_counter + 1 %>  by (<%= solution.user.name %>) at <%= render_solution_created_at(solution) %> </h4> 
   <%= render_solution_content(solution) %>
+
+  <hr>
 </div>
+

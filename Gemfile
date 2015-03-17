@@ -27,6 +27,7 @@ gem "devise"
 
 gem "underscore-rails"
 
+
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'font-awesome-rails'
 gem 'bootstrap_helper', '~> 4.2', git: 'https://github.com/zhusee2/bootstrap-helper.git'

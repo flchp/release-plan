@@ -21,10 +21,19 @@
 </div>
 
 
+<div class="group">
+ <span class="pull-right" style="padding-top:20px;"> 
+   <%= ibutton("Propose solution", new_problem_solution_path(@problem), :class => "btn btn-default btn-primary", :iclass => "fa fa-plus") %> 
+ </span>
+ 
+
 <h3> How can we improve : </h3>
+
 <hr>
 
-<%= link_to("propose solution", new_problem_solution_path(@problem)) %>
+</div>
+
+
 
 <%= render :partial =>  "problems/solution", :collection => @problem.solutions, as: :solution  %>
 
@@ -32,5 +41,7 @@
 
 <hr>
 
+
+<%= render :partial => "problems/problem_comments" %>
 
 <%= render :partial => "problems/problem_comment_form" %>
