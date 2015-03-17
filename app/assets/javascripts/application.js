@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require jquery.autogrow-textarea
 //= require bootstrap/dropdown
 //= require bootstrap/alert
 //= require bootstrap/modal
@@ -33,5 +34,7 @@ $('.dp').on('change', function(){
     });
   });
 
+
+$("textarea").autogrow();
 
 

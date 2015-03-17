@@ -10,10 +10,25 @@ module ApplicationHelper
     width = case size
     when :tiny
       20
+    when :small
+      40
     else
       60
     end
     avatar_icon(user, :class => "img-circle", :size => width)
+  end
+
+
+  def render_comment_avatar(user, size = :small)
+    width = case size
+    when :tiny
+      20
+    when :small
+      40
+    else
+      60
+    end
+    avatar_icon(user, :class => "", :size => width)
   end
 
 

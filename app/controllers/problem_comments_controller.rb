@@ -10,7 +10,7 @@ class ProblemCommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to problem_path(@problem)
+      redirect_to problem_path(@problem, :anchor => "comment_#{@comment.id}")
     else
       render "problems/show"
     end

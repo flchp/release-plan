@@ -9,4 +9,8 @@ module SolutionsHelper
     solution.created_at.to_s(:short)
   end
 
+  def render_user_company(user)
+    user.company
+  end
+
 end
