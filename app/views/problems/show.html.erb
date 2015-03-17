@@ -3,7 +3,7 @@
     <div class="col-md-8 col-lg-9">
       <div class="page-section padding-top-none">
         <div class="s-container">
-          <h1 class="text-display-1 margin-top-none">Can someone help me? I need a design advice</h1>
+          <h1 class="text-display-1 margin-top-none"><%= @problem.title %></h1>
           <p class="text-light text-caption">
             posted by
             <a href="#">
@@ -21,6 +21,9 @@
           <%= render_problem_description(@problem) %>
         </div>
       </div>
+
+      <%= render "solutions" %>
+
       <%# render :partial => "comments" %>
     </div>
     <%# render :partial => "sidebar" %>
