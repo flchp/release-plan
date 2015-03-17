@@ -1,9 +1,8 @@
 class ProblemsController < ApplicationController
-  before_action :login_required, :except => [:index]
-  def index
-    @problems = Problem.all
+  before_action :login_required
 
-   
+  def index
+    @problems = Problem.all 
   end
 
 
