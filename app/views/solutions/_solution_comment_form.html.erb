@@ -9,6 +9,7 @@
       <%= f.input :content , :label => "Leave Comment",  :input_html => { :rows => 3 , :data => { :provide => "markdown"} } %>
 
 
+
         <%= f.input :agree_level,  :collection => Comment.agree_levels , 
         as: :radio_buttons, :label => false, :inline_label => true, :boolean_style => :inline, :wrapper_html => { :class => "panel-body"} ,
           :item_wrapper_tag => :div, :item_wrapper_class => "radio-info radio-inline",
@@ -17,6 +18,7 @@
          
       <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
       <% end %>
+
 
 
 
