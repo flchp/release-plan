@@ -93,6 +93,7 @@ GEM
     disposable (0.0.9)
       representable (~> 2.0)
       uber
+    enum_help (0.0.14)
     erubis (2.7.0)
     execjs (2.4.0)
     faraday (0.9.1)
@@ -268,6 +269,7 @@ DEPENDENCIES
   cells
   coffee-rails (~> 4.1.0)
   devise
+  enum_help
   font-awesome-rails
   gravatar_image_tag
   jbuilder (~> 2.0)

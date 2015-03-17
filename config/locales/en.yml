@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  enums:
+    comment:
+      agree_level:
+        agree: "Agree"
+        object: "Object"
+        against: "Against"

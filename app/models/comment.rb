@@ -11,6 +11,7 @@
 #  role             :string           default("comments")
 #  created_at       :datetime
 #  updated_at       :datetime
+#  agree_level      :integer
 #
 # Indexes
 #
@@ -28,6 +29,10 @@ class Comment < ActiveRecord::Base
   validates :content, presence: true
 
   default_scope -> { order('created_at ASC') }
+
+   enum agree_level: { "agree" => 0,                       "object"           => 1,                       "against"   => 2,                      }
+
+
 
   # NOTE: install the acts_as_votable plugin if you
   # want user to vote on the quality of comments.

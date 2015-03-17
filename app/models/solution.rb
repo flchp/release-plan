@@ -19,7 +19,7 @@ class Solution < ActiveRecord::Base
   validates :content, presence: true
 
   acts_as_commentable
-  
+
 
   
 end
