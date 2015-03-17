@@ -4,7 +4,7 @@
 #
 #  id               :integer          not null, primary key
 #  title            :string(50)       default("")
-#  comment          :text
+#  content          :text
 #  commentable_id   :integer
 #  commentable_type :string
 #  user_id          :integer
@@ -25,7 +25,7 @@ class Comment < ActiveRecord::Base
 
   belongs_to :commentable, :polymorphic => true, :counter_cache => true
 
-  validates :comment, presence: true
+  validates :content, presence: true
 
   default_scope -> { order('created_at ASC') }
 

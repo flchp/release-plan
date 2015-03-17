@@ -1,6 +1,7 @@
 class ProblemCommentsController < ApplicationController
 
   before_action :find_problem
+  before_action :login_required
   
   def create
    
@@ -18,7 +19,7 @@ class ProblemCommentsController < ApplicationController
   protected
 
   def comment_params
-    params.require(:comment).permit(:comment)
+    params.require(:comment).permit(:content)
   end
 
   def find_problem

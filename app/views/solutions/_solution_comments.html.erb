@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+
+    <%= solution.comments_count %>
+        <div class="panel-body">
+            <ul class="list-group">  
+
+                <%= render :partial => "solutions/comment_box", :collection => solution.comments, :as => :comment %>  
+            </ul>
+    
+        </div>
+    </div>
+  </div>
+</div>

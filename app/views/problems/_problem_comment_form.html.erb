@@ -1,5 +1,5 @@
-<%= simple_form_for [@problem, @comment ] do |f| %>
+<%= simple_form_for [@problem, Comment.new ] do |f| %>
 
-  <%= f.input :comment, :label => "Comment ( support Markdown syntax) ", :input_html => { :rows => 10, :data => { :provide => "markdown"} } %> 
+  <%= f.input :content, :label => "Comment ( support Markdown syntax) ", :input_html => { :rows => 10, :data => { :provide => "markdown"} } %> 
   <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
 <% end %> 

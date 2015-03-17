@@ -1,6 +1,5 @@
 class ProblemsController < ApplicationController
-
-
+  before_action :login_required, :except => [:index]
   def index
     @problems = Problem.all
 
@@ -26,6 +25,7 @@ class ProblemsController < ApplicationController
   def show
     @problem = Problem.find(params[:id])
     @comment = Comment.new
+    @solution_comment = Comment.new
   end
 
 

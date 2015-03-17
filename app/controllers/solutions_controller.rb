@@ -1,5 +1,6 @@
 class SolutionsController < ApplicationController
 
+  before_action :login_required, :except => [:index]
   before_action :find_problem
   
 

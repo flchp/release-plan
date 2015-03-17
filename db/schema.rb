@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150313200031) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "title",            limit: 50, default: ""
-    t.text     "comment"
+    t.text     "content"
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.integer  "user_id"
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(version: 20150313200031) do
     t.text     "content"
     t.integer  "user_id"
     t.integer  "problem_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "comments_count", default: 0
   end
 
   create_table "users", force: :cascade do |t|

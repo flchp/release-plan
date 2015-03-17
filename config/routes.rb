@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :problems do
-    resources :solutions
+    resources :solutions 
     resources :comments, :controller => "problem_comments"
+  end
+
+  resources :solutions do  
+    resources :comments, :controller => "solution_comments"
   end
 
 

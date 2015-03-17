@@ -4,6 +4,12 @@
   <h4> Proposal <%= solution_counter + 1 %>  by (<%= solution.user.name %>) at <%= render_solution_created_at(solution) %> </h4> 
   <%= render_solution_content(solution) %>
 
+  <%= render :partial => "solutions/solution_comments", :locals => { :solution => solution } %>
+
+  <div class="group">
+    <%= render :partial => "solutions/solution_comment_form", :locals => { :solution => solution } %>
+  </div>
+
   <hr>
 </div>
 
