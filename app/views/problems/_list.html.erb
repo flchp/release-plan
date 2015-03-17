@@ -17,8 +17,11 @@
         </div>
     </div>
     <div class="media-right">
-        <a href="website-forum-thread.html" class="btn btn-white text-light">
-          <i class="fa fa-comments fa-fw"></i> <%= problem.comments_count %>
-        </a>
+
+      <%= link_to problem_path(problem), :class => "btn btn-white text-light" do %>
+         <i class="fa fa-comments fa-fw"></i> <%= problem.comments_count %>
+      <% end %> 
+
+
     </div>
 </li>
