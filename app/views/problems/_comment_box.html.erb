@@ -1,23 +1,17 @@
 <%= div_for(comment, class: "group problem-comment") do %>
-
-
 <div class="media s-container">
   <a class="media-left" href="">
-   <%= render_comment_avatar(comment.user, :small) %>
+    <%= render_comment_avatar(comment.user, :small) %>
   </a>
   <div class="media-body">
     <div class="panel panel-default">
       <div class="panel-body">
-        <small class="text-grey-400 pull-right"> <%= time_ago_in_words(comment.created_at) %> </small>
-        <h5 class="media-heading margin-v-5"><%= render_user_name(comment.user) %></h5>
-        <p class="margin-none">
-          <%= render_comment_content(comment) %>
-        </p>
-
+        <div class="text-subhead-2"><%= render_user_name(comment.user) %> <span class="text-caption text-light">- <%= time_ago_in_words(comment.created_at) %></span></div>
+        <p><%= render_comment_content(comment) %></p>
       </div>
+      
     </div>
   </div>
 </div>
 <% end %>
-
 <br>
