@@ -10,7 +10,7 @@ class SolutionCommentsController < ApplicationController
     @solution_comment.user = current_user
 
     if @solution_comment.save
-      redirect_to problem_path(@problem)
+      redirect_to problem_path(@problem,:anchor => "comment_#{@solution_comment.id}")
     else
       render "problems/show"
     end

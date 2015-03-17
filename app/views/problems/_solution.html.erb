@@ -1,15 +1,32 @@
+<div class="testimonial">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= render_solution_content(solution) %>
 
+    
+    </div>
+  </div>
+  <div class="media v-middle">
+    <div class="media-left">
+      <%= render_user_avatar(solution.user, :small) %>
+    </div>
+    <div class="media-body">
+      <p class="text-subhead margin-v-5-0">
+        <strong>
+          <%= render_user_name(solution.user) %> <span class="text-muted">@ <%= render_user_company(solution.user) %> </span>
+        </strong>
 
-<div class="group">
-  <h4> Proposal <%= solution_counter + 1 %>  by (<%= solution.user.name %>) at <%= render_solution_created_at(solution) %> </h4> 
-  <%= render_solution_content(solution) %>
-
-  <%= render :partial => "solutions/solution_comments", :locals => { :solution => solution } %>
-
-  <div class="group">
-    <%= render :partial => "solutions/solution_comment_form", :locals => { :solution => solution } %>
+      </p>
+    </div>
   </div>
 
-  <hr>
-</div>
+  <div class="group">
 
+
+    <br>
+  <%= render :partial => "solutions/solution_comments", :locals => { :solution => solution } %>
+  <%= render :partial => "solutions/solution_comment_form", :locals => { :solution => solution } %>
+
+
+  </div>
+</div>

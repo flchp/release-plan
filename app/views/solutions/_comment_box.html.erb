@@ -1,20 +1,27 @@
-<li class="list-group-item">
-  <div class="row">
+<%= div_for(comment, class: "group solution-comment") do %>
 
-    <div class="action pull-right" style="margin-right:20px;">
+<div class="group">
+    <div class="media-left">
+        <div class="width-70 text-center">
+            <p>
+                <a href="">
+                    <%= render_comment_avatar(comment.user, :small) %>
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="media-body">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="text-subhead-2"><%= render_user_name(comment.user) %> <span class="text-caption text-light">- <%= time_ago_in_words(comment.created_at) %> </span></div>
+                <p>
+                    <%= render_comment_content(comment) %>
+                </p>
+            </div>
+        </div>
 
-  
     </div>
 
-    <div class="col-xs-2 col-md-1">         <%= render_user_avatar(comment.user) %>    </div>
-    <div class="col-xs-10 col-md-11">
-      <div class="group ">
-        <%= render_comment_content(comment) %>
-        
-    </div>
-    <div class="mic-info pull-right">  
-        By: <%= render_user_name(comment.user) %> on  <span class="underline"><%= comment.updated_at.to_s(:short) %> </span>
-    </div>
-</div>
-</div>
-</li>
+<% end %>
+
+<br>

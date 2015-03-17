@@ -34,4 +34,7 @@ class User < ActiveRecord::Base
 
 
 
+  def company
+    ""
+  end
 end
