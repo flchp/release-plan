@@ -45,7 +45,7 @@ gem "cells"
 gem 'enum_help'
 
 gem "ultra_markdown"
-gem 'rails-bootstrap-markdown'
+gem 'rails-bootstrap-markdown', :github => "xdite/rails-bootstrap-markdown"
 
 gem "active_link_to", :github => "xdite/active_link_to", :branch => "wrap_tag_css"
 gem "wice_grid"
