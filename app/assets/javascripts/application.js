@@ -50,7 +50,8 @@ $(function() {
 });
 
 var appendContent = function(imageUrl, mediaId) {
-   $('.problem-comment-form .new_comment textarea').append("\n"+"![](" + imageUrl + ")");
+   var $textArea = $('.problem-comment-form .new_comment textarea');
 
-};   
+   $textArea.val($textArea.val() + "\n![](" + imageUrl + ")");
+};
 
