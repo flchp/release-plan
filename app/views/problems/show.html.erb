@@ -4,6 +4,10 @@
       <div class="page-section padding-top-none">
         <div class="s-container">
           <h1 class="text-display-1 margin-top-none"><%= @problem.title %></h1>
+          <div class="pull-right">
+            <%= link_to("Edit", edit_problem_path(@problem), :class => "underline") %>
+          </div>
+          
           <p class="text-light text-caption">
             posted by
             <a href="#">
@@ -21,9 +25,7 @@
           <%= render_problem_description(@problem) %>
         </div>
       </div>
-
       <%= render "solutions" %>
-
       <%= render "comments" %>
       <%= render :partial => "problems/problem_comment_form" %>
     </div>
