@@ -6,6 +6,10 @@
   <div class="media-body">
     <div class="panel panel-default">
       <div class="panel-body">
+        <div class="pull-right">
+          <%= render_comment_edit_link(comment, current_user) %>
+        </div>
+        
         <div class="text-subhead-2"><%= render_user_name(comment.user) %> <span class="text-caption text-light">- <%= time_ago_in_words(comment.created_at) %></span></div>
         <p><%= render_comment_content(comment) %></p>
       </div>

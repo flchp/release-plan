@@ -15,7 +15,7 @@ module SolutionsHelper
 
   def render_solution_edit_link(solution, user)
     if solution.user == user
-      link_to("Edit", edit_problem_solution_path(solution, user), :class => "underline")
+      link_to("Edit", edit_problem_solution_path(solution.problem_id, solution), :class => "underline")
     end
   end
 end

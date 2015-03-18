@@ -21,6 +21,21 @@ class SolutionsController < ApplicationController
     end
   end
 
+  def edit
+    @solution = current_user.solutions.find(params[:id])
+  end
+  
+
+  def update
+    @solution = current_user.solutions.find(params[:id])
+
+    if @solution.update(solution_params)
+      redirect_to problem_path(@problem)
+    else
+      render :edit
+    end
+  end
+
   protected
 
   def solution_params

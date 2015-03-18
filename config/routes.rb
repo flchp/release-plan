@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :comments, :controller => "solution_comments"
   end
 
+  resources :comments
 
   resources :media_contents, only: [:create]
   

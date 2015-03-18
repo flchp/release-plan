@@ -19,7 +19,7 @@ class SolutionCommentsController < ApplicationController
   protected
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:content, :agree_level)
   end
 
   def find_solution
