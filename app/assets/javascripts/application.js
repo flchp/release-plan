@@ -40,7 +40,7 @@ $("textarea").autogrow();
 
 $(function() {
   var mediaDropzone;
-  mediaDropzone = new Dropzone("#media-dropzone");
+  mediaDropzone = new Dropzone(".problem-comment-form .new_comment textarea", { clickable: false, url: "/media_contents" });
   return mediaDropzone.on("success", function(file, responseText) {
     var _this = this;
     imageUrl = responseText.file_name.url;
