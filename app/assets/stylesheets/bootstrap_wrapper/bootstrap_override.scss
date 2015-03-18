@@ -1,0 +1,11 @@
+@import "compass/css3/images";
+
+body{
+  background: image-url('retina_wood.png') repeat;
+  padding-top: 0px;
+
+  @include background(
+    linear-gradient(rgba(0,0,0,.15) 0, rgba(0,0,0,0) 80px) no-repeat,
+    image-url('retina_wood.png') repeat
+  );
+}
