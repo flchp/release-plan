@@ -38,22 +38,19 @@ $('.dp').on('change', function(){
 
 $("textarea").autogrow();
 
-
-//$(".new_comment textarea").dropzone({ url: "/media_contents" });
-
 $(function() {
   var mediaDropzone;
-  mediaDropzone = new Dropzone(".new_comment textarea", { url: "/media_contents"} );
+  mediaDropzone = new Dropzone("#media-dropzone");
   return mediaDropzone.on("success", function(file, responseText) {
     var _this = this;
+    imageUrl = responseText.file_name.url;
     appendContent(responseText.file_name.url, responseText.id);
 
   });
 });
 
-
-
 var appendContent = function(imageUrl, mediaId) {
-  $('.new_comment textarea').append("\n"+"![](" + imageUrl + ")");
-};
+   $('.problem-comment-form .new_comment textarea').append("\n"+"![](" + imageUrl + ")");
+
+};   
 
