@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "devise"
 
 gem "underscore-rails"
-
+gem 'carrierwave'
 
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'font-awesome-rails'
@@ -50,6 +50,7 @@ gem 'rails-bootstrap-markdown'
 gem "active_link_to", :github => "xdite/active_link_to", :branch => "wrap_tag_css"
 gem "wice_grid"
 
+gem 'dropzonejs-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

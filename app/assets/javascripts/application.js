@@ -19,6 +19,7 @@
 //= require bootstrap/modal
 //= require bootstrap/tooltip
 //= require bootstrap-markdown-bundle
+//= require dropzone
 //= require_self
 
 
@@ -37,4 +38,22 @@ $('.dp').on('change', function(){
 
 $("textarea").autogrow();
 
+
+//$(".new_comment textarea").dropzone({ url: "/media_contents" });
+
+$(function() {
+  var mediaDropzone;
+  mediaDropzone = new Dropzone(".new_comment textarea", { url: "/media_contents"} );
+  return mediaDropzone.on("success", function(file, responseText) {
+    var _this = this;
+    appendContent(responseText.file_name.url, responseText.id);
+
+  });
+});
+
+
+
+var appendContent = function(imageUrl, mediaId) {
+  $('.new_comment textarea').append("\n"+"![](" + imageUrl + ")");
+};
 
