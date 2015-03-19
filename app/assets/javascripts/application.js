@@ -51,7 +51,14 @@ $(function() {
       url: "/media_contents",
       init: function() {
         this.on("success", function(file, responseText){
-          var imageString = "\n![](" + responseText.file_name.url + ")";
+           match = responseText.file_name.url.match(/\.(jpg|png|gif)\b/);
+           if (match != null) {
+           
+               var imageString = "\n![](" + responseText.file_name.url + ")";
+           } else {
+               var imageString = "\n<" + responseText.file_name.url + ">";
+           }
+         
           $textarea.val($textarea.val() + imageString);
           $textarea.trigger("change"); // to also trigger auto-grow plugin
         });
