@@ -32,7 +32,7 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'font-awesome-rails'
 gem 'bootstrap_helper', '~> 4.2', git: 'https://github.com/zhusee2/bootstrap-helper.git'
-gem 'simple_form', '~> 3.1.0.rc'
+gem 'simple_form', '~> 3.1.0'
 gem 'gravatar_image_tag'
 gem "seo_helper"
 
@@ -67,7 +67,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'dotenv-rails'
-  
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

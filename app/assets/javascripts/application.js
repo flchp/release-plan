@@ -35,23 +35,24 @@ $('.dp').on('change', function(){
     });
   });
 
-
-$("textarea").autogrow();
+// Prevent auto-mounting Dropzone instance
+Dropzone.autoDiscover = false;
 
 $(function() {
-  var mediaDropzone;
-  mediaDropzone = new Dropzone(".problem-comment-form .new_comment textarea", { clickable: false, url: "/media_contents" });
-  return mediaDropzone.on("success", function(file, responseText) {
-    var _this = this;
-    imageUrl = responseText.file_name.url;
-    appendContent(responseText.file_name.url, responseText.id);
+  $('.new_comment textarea').each(function(index, element){
+    var $textarea = $(element);
 
+    $textarea.autogrow();
+    $textarea.dropzone({
+      clickable: false,
+      url: "/media_contents",
+      init: function() {
+        this.on("success", function(file, responseText){
+          var imageString = "\n![](" + responseText.file_name.url + ")";
+          $textarea.val($textarea.val() + imageString);
+          $textarea.trigger("change"); // to also trigger auto-grow plugin
+        });
+      }
+    });
   });
 });
-
-var appendContent = function(imageUrl, mediaId) {
-   var $textArea = $('.problem-comment-form .new_comment textarea');
-
-   $textArea.val($textArea.val() + "\n![](" + imageUrl + ")");
-};
-

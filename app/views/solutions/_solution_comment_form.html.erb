@@ -5,27 +5,28 @@
       </div>
     </div>
     <div class="media-body">
-      <%= simple_form_for [solution, Comment.new]  do |f|  %>
-      <%= f.input :content , :label => "Leave Comment",  :input_html => { :rows => 3 , :data => { :provide => "markdown"} } %>
+      <%= simple_form_for([solution, Comment.new],
+            :namespace => "solution_#{solution.id}") do |f| %>
+
+        <%= f.input(:content, :label => "Leave Comment",
+              :input_html => {
+                :rows => 3,
+                :data => { :provide => "markdown" }
+              }) %>
 
 
-       
-      <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
-        <%= f.input :agree_level,  :collection => Comment.agree_levels , 
-        as: :radio_buttons, :label => false, :inline_label => true, :boolean_style => :inline, :wrapper_html => { :class => "panel-body"} ,
-          :item_wrapper_tag => :div, :item_wrapper_class => "radio-info radio-inline",
-        :input_html => { :class => "bbb"}
-         %>
-  
+        <div class="form-footer text-right">
+          <%= f.input(:agree_level, :as => :radio_buttons, :label => false,
+                :collection => Comment.agree_levels,
+                :inline_label => true,
+                :boolean_style => :inline,
+                :wrapper_html => { :class => "pull-left" },
+                :item_wrapper_class => "radio-info radio-inline",
+                :input_html => { :class => "bbb" }) %>
+
+          <%= f.submit("Submit", :class => "btn", :disable_with => 'Submiting...') %>
+        </div>
       <% end %>
-
-
-
-
-  
-
-
-
     </div>
   </div>
 </div>
