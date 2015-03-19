@@ -38,6 +38,9 @@ $('.dp').on('change', function(){
 // Prevent auto-mounting Dropzone instance
 Dropzone.autoDiscover = false;
 
+
+
+
 $(function() {
   $("textarea[data-provide='markdown']").each(function(index, element){
     var $textarea = $(element);

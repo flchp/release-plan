@@ -28,6 +28,8 @@ gem "devise"
 
 gem "underscore-rails"
 gem 'carrierwave'
+gem "fog-aws"
+gem "fog"
 
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'font-awesome-rails'
