@@ -5,7 +5,8 @@
       </div>
     </div>
     <div class="media-body">
-      <%= simple_form_for [solution, Comment.new]  do |f|  %>
+      <%= simple_form_for [solution, Comment.new],
+            :namespace => "solution_#{solution.id}" do |f| %>
       <%= f.input :content , :label => "Leave Comment",  :input_html => { :rows => 3 , :data => { :provide => "markdown"} } %>
 
 
