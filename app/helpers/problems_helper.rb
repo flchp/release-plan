@@ -12,4 +12,8 @@ module ProblemsHelper
   def render_problem_description(problem)
     problem.description.to_markdown
   end
+
+  def render_problem_cause(problem)
+    problem.causes.to_markdown
+  end
 end
