@@ -39,7 +39,7 @@ $('.dp').on('change', function(){
 Dropzone.autoDiscover = false;
 
 $(function() {
-  $('.new_comment textarea').each(function(index, element){
+  $("textarea[data-provide='markdown']").each(function(index, element){
     var $textarea = $(element);
 
     $textarea.autogrow();
