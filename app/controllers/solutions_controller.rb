@@ -39,7 +39,7 @@ class SolutionsController < ApplicationController
   protected
 
   def solution_params
-    params.require(:solution).permit(:content)
+    params.require(:solution).permit(:content, :title)
   end
 
   def find_problem

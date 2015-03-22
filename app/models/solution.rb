@@ -9,11 +9,12 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  comments_count :integer          default("0")
+#  title          :string
 #
 
 class Solution < ActiveRecord::Base
 
-  belongs_to :problem
+  belongs_to :problem, :counter_cache => true
   belongs_to :user
 
   validates :content, presence: true
