@@ -35,7 +35,7 @@ gem "fog"
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'font-awesome-rails'
 gem 'bootstrap_helper', '~> 4.2', git: 'https://github.com/zhusee2/bootstrap-helper.git'
-gem 'simple_form', '~> 3.1.0'
+gem 'simple_form', "3.1.0rc2"
 gem 'gravatar_image_tag'
 gem "seo_helper"
 

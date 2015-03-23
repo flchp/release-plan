@@ -8,24 +8,26 @@
       <%= simple_form_for([solution, Comment.new],
             :namespace => "solution_#{solution.id}") do |f| %>
 
-        <%= f.input(:content, :label => false,
+        <%= f.input(:content, :label => false,    :inline_label => false,  :boolean_style => :inline,
               :input_html => {
                 :rows => 3,
                 :data => { :provide => "markdown" }
               }) %>
 
 
-        <div class="form-footer text-right">
-          <%= f.input(:agree_level, :as => :radio_buttons, :label => false,
-                :collection => Comment.agree_levels,
-                :inline_label => true,
-                :boolean_style => :inline,
-                :wrapper_html => { :class => "pull-left" },
-                :item_wrapper_class => "radio-info radio-inline",
-                :input_html => { :class => "bbb" }) %>
-
-          <%= f.submit("Submit", :class => "btn", :disable_with => 'Submiting...') %>
+        <div class="group">
+        
+             <%= f.input(:agree_level, :as => :radio_buttons,
+              :collection => Comment.agree_levels, :label => false,
+              :item_label_class => "btn btn-default", 
+              :wrapper_html => { :class => "btn-group", :data => { :toggle => "buttons"}},
+              :item_wrapper_tag => false,
+        
+             ) %>
+                      <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
         </div>
+
+
       <% end %>
     </div>
   </div>

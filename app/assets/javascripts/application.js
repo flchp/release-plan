@@ -18,6 +18,7 @@
 //= require bootstrap/alert
 //= require bootstrap/modal
 //= require bootstrap/tooltip
+//= require bootstrap/button
 //= require bootstrap-markdown-bundle
 //= require dropzone
 //= require_self
