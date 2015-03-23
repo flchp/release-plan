@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   before_action :login_required
-  before_action :find_resource
+
 
 
   def edit
@@ -11,6 +11,8 @@ class CommentsController < ApplicationController
 
   def update
     @comment = current_user.comments.find(params[:id])
+
+    find_resource
 
     if @comment.update(comment_params)
       redirec_to problem_path(@resource)

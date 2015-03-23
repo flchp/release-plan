@@ -1,28 +1,15 @@
-<%= div_for(comment, class: "group solution-comment") do %>
-<div class="media-left">
-    <div class="width-70 text-center">
-        <p>          
-            <%= render_comment_avatar(comment.user, :small) %>
-        </p>
-    </div>
-</div>
-<div class="media-body">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="pull-right">
- 
-                <%= render_comment_edit_link(comment, current_user) %>
-            </div>
-            <div class="text-subhead-2"><%= render_user_name(comment.user) %>
-             <span class="text-caption text-light">- <%= time_ago_in_words(comment.created_at) %> </span>
 
-             <%= render_agree_level(comment) %>
-            </div>
-            <p>
-                <%= render_comment_content(comment) %>
-            </p>
-        </div>
+
+<%= div_for(comment, class: "group list-group-item ", :style => "") do %>
+    <%= render_comment_avatar(comment.user, :tiny) %>
+    <%= render_user_name(comment.user) %>
+    <%= render_agree_level(comment) %>
+    <p style="padding: 2px;">
+        <%= render_comment_content(comment) %>
+    </p>
+    <div class="pull-right">
+        <%= time_ago_in_words(comment.created_at) %> 
+        <%= render_comment_edit_link(comment, current_user) %>
     </div>
-</div>
+
 <% end %>
-<br>
