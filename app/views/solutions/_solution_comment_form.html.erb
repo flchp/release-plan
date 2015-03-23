@@ -18,10 +18,11 @@
         <div class="group">
         
              <%= f.input(:agree_level, :as => :radio_buttons,
-              :collection => Comment.agree_levels, :label => false,
+              :collection => Comment.agree_levels, :label => false, :label_method => lambda { |item| render_agree_text(item[0]) }, 
               :item_label_class => "btn btn-default", 
               :wrapper_html => { :class => "btn-group", :data => { :toggle => "buttons"}},
               :item_wrapper_tag => false,
+
         
              ) %>
                       <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>

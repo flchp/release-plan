@@ -33,4 +33,17 @@ module SolutionsHelper
     else
     end
   end
+
+  def render_agree_text(text)
+    case text
+    when "agree"
+      "<i class='fa fa-thumbs-up'></i> Agree".html_safe
+    when "object"
+      "<i class='fa fa-thumbs-down'></i> Object".html_safe  
+    when "against"
+      "<i class='fa fa-times'></i> Against".html_safe
+    end 
+  end
+
+
 end

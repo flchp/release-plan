@@ -46,8 +46,6 @@ gem 'acts_as_commentable'
 gem "reform"
 gem "cells"
 
-gem 'enum_help'
-
 gem "ultra_markdown"
 gem 'rails-bootstrap-markdown', :github => "xdite/rails-bootstrap-markdown"
 
