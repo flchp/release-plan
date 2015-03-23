@@ -22,5 +22,5 @@ class Solution < ActiveRecord::Base
   acts_as_commentable
 
 
-  
+  scope :recent , -> { order("id ASC")}
 end

@@ -15,20 +15,19 @@
               }) %>
 
 
-        <div class="group">
+        <div class="group" style="margin-top:-15px; margin-bottom: 10px;">
         
              <%= f.input(:agree_level, :as => :radio_buttons,
               :collection => Comment.agree_levels, :label => false, :label_method => lambda { |item| render_agree_text(item[0]) }, 
               :item_label_class => "btn btn-default", 
-              :wrapper_html => { :class => "btn-group", :data => { :toggle => "buttons"}},
+              :wrapper_html => { :class => "btn-group btn-group-sm", :data => { :toggle => "buttons"}},
               :item_wrapper_tag => false,
 
         
              ) %>
-                      <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right" %>
+              
+            <%= f.submit "Submit", :disable_with => 'Submiting...', :class => "btn pull-right", :style => "margin-top: 10px;" %>              
         </div>
-
-
       <% end %>
     </div>
   </div>

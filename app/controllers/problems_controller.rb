@@ -38,6 +38,8 @@ class ProblemsController < ApplicationController
     @problem = Problem.find(params[:id])
     @comment = Comment.new
     @solution_comment = Comment.new
+
+    set_page_title @problem.og_title
   end
 
 

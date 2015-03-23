@@ -22,4 +22,8 @@ class Problem < ActiveRecord::Base
 
   acts_as_commentable
   
+ 
+  def og_title
+    ERB::Util.h("#{title}")
+  end
 end

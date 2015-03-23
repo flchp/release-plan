@@ -1,5 +1,6 @@
 <div class="list-group" style="margin-left: 50px; padding-top:20px;">
-  <%= render :partial => "solutions/comment_box", :collection => solution.comments, :as => :comment %>
   <%= render :partial => "solutions/solution_comment_form", :locals => { :solution => solution } %>
+  <%= render :partial => "solutions/comment_box", :collection => solution.comments, :as => :comment %>
+
 </div>
 

@@ -8,7 +8,7 @@
             <h2 class="text-headline margin-none">Solutions</h2>
             <p class="text-subhead text-light">  <%= @problem.solutions_count %> solution(s)</p>
             <hr>
-            <%= render :partial =>  "problems/solution", :collection => @problem.solutions, as: :solution  %>
+            <%= render :partial =>  "problems/solution", :collection => @problem.solutions.recent , as: :solution  %>
             
         </div>
     </div>
